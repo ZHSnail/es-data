@@ -2,6 +2,7 @@ package com.example.esdata.core.web.handler;
 
 import com.example.esdata.core.common.exception.BusinessException;
 import com.example.esdata.core.web.web.Result;
+import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.BindException;
 import org.springframework.validation.BindingResult;
@@ -12,7 +13,6 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import javax.validation.ConstraintViolationException;
-import javax.validation.Valid;
 import javax.validation.ValidationException;
 
 /**
@@ -21,6 +21,7 @@ import javax.validation.ValidationException;
  */
 @ControllerAdvice
 @Slf4j
+@Data
 public class WebExceptionHandler {
 
     @ExceptionHandler(BusinessException.class)
